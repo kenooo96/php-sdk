@@ -19,3 +19,4 @@ https://www.facebook.com/dialog/oauth?
             print_r($_REQUEST["request_ids"]);
          }
 ?>
+<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2Fdjremixradiocomba%2F125435424211085&amp;width=292&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=true&amp;height=427" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:427px;" allowTransparency="true"></iframe>
