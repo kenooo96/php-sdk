@@ -1,8 +1,8 @@
  <?php 
 
-     $app_id = "YOUR_APP_ID";
+     $app_id = "181380411929554";
 
-     $canvas_page = "YOUR_CANVAS_PAGE_URL";
+     $canvas_page = "http://apps.facebook.com/djremixradio/";
 
      $auth_url = "http://www.facebook.com/dialog/oauth?client_id=" 
             . $app_id . "&redirect_uri=" . urlencode($canvas_page);
