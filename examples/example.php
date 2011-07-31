@@ -1,21 +1,21 @@
- <?php 
+https://www.facebook.com/dialog/oauth?
+     client_id=223402631035930&redirect_uri=http://apps.facebook.com/djremixradio/
+<?php 
 
-     $app_id = "181380411929554";
+         $app_id = "YOUR_APP_ID";
 
-     $canvas_page = "http://apps.facebook.com/djremixradio/";
+         $canvas_page = "YOUR_CANVAS_PAGE_URL";
 
-     $auth_url = "http://www.facebook.com/dialog/oauth?client_id=" 
-            . $app_id . "&redirect_uri=" . urlencode($canvas_page);
+         $message = "Would you like to join me in this great app?";
 
-     $signed_request = $_REQUEST["signed_request"];
+         $requests_url = "http://www.facebook.com/dialog/apprequests?app_id=" 
+                . $app_id . "&redirect_uri=" . urlencode($canvas_page)
+                . "&message=" . $message;
 
-     list($encoded_sig, $payload) = explode('.', $signed_request, 2); 
-
-     $data = json_decode(base64_decode(strtr($payload, '-_', '+/')), true);
-
-     if (empty($data["user_id"])) {
-            echo("<script> top.location.href='" . $auth_url . "'</script>");
-     } else {
-            echo ("Welcome User: " . $data["user_id"]);
-     } 
- ?>
+         if (empty($_REQUEST["request_ids"])) {
+            echo("<script> top.location.href='" . $requests_url . "'</script>");
+         } else {
+            echo "Request Ids: ";
+            print_r($_REQUEST["request_ids"]);
+         }
+?>
